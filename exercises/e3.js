@@ -16,13 +16,16 @@
 
 // Your code goes here...
 
+function doesArrayIncludeItemsBetweenVals (arr,val1,val2){
+  for(var i = 0; i < arr.length; i++){
+  if (arr[i] > val1 && arr[i] < val2){
+  return true;
+  }
+  }
+  return false;
+}
 
-
-
-/**
- * ====================================================
- * Please read the /exercises-info/e4.md file. It describes different types of syntax to write functions
- * Create three functions using 3 types of syntax: named, arrow and function expression (with anonymous function)
+/* Create three functions using 3 types of syntax: named, arrow and function expression (with anonymous function)
  * Named function: getValueWithConditionOne;
  * Arrow Function name: getValueWithConditionTwo;
  * Variable name for the function expression: getValueWithConditionThree;
@@ -32,9 +35,24 @@
     * Else return the doubled sum of them
  * getValueWithConditionOne(40, 40) => 80;
  * getValueWithConditionOne(20, 30) => 100;
- */
-
-// Your code goes here...
+ */ 
+function getValueWithConditionOne (a, b){
+if (a === 40 && b === 40){
+return a + b;
+} else 
+ return (a + b) * 2;
+}
+const getValueWithConditionTwo =(a, b) =>{
+if (a === 40 && b === 40){
+return a + b;
+} else return (a + b) * 2;
+}
+const getValueWithConditionThree = function (a, b){
+  if(a === 40 && b === 40){
+    return a + b;
+  } else
+  return (a + b) * 2;
+}
 
 
 
